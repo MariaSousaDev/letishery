@@ -11,11 +11,8 @@ export default function FilterList({code}) {
         { title:"Animecon", year:"2023", date:"June 9 to 11", location:"Rijswijk, Netherlands", code:"nl" },
     ]
 
-    console.log("list",code.includes(events[3].code));
-
-
   return (
-      <div className='grid grid-cols-3 gap-5 items-center '>
+    <div className='grid grid-cols-3 gap-5 items-center md:grid-cols-2'>
         {
             (code.length > 0 ? events.filter(entry => code.includes(entry.code)) : events)
             .map((event,index) => <FilterListItem key={index} {...event}  /> )

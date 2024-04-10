@@ -5,8 +5,8 @@ export default function Works() {
 
   return (
     <div>
-      <h2 className='text-3xl'>Works</h2>
-      <Filter/>
+      <h2>Works</h2>
+      <Filter type="works"/>
 
     </div>
   )

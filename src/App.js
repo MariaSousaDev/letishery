@@ -7,6 +7,7 @@ import Conventions from "./views/Conventions";
 import Layout from "./views/Layout";
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Index from './views/Index';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <Router >
       <Routes>
         <Route element={<Layout />} >
-          <Route path="/" element={<About />} />
+          <Route path="/" element={<Index />} />
           <Route path="/About" element={<About />} />
           <Route path="/Works" element={<Works />} />
           <Route path="/Contact" element={<Contact />} />

@@ -9,7 +9,7 @@ export default function Layout() {
   return (
       <div className="flex font-mono">
           <Menu />
-          <div className='min-h-screen flex flex-col justify-center w-full'>
+          <div className='min-h-screen flex flex-col justify-center w-full pl-[22vw] '>
               <div className='p-8 text-center'>
                   <a className='inline-block w-[150px]' href="#">
                       <img src="https://letishery.carrd.co/assets/images/image10.png?v=8dee3245" />

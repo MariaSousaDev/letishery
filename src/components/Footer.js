@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Footer extends Component {
   render() {
     return (
-        <div className='bg-blue-500 p-8 text-center'>
+      <div className='p-8 text-center bg-dawn-pink-50'>
             2024 Letishery
         </div>
     )
