@@ -46,7 +46,7 @@ export default function FilterWork({code}) {
  
 
     return (
-        <div className='columns-2 gap-6  xl:columns-3 items-center justify-center'>
+        <div className='columns-1 sm:columns-2 gap-6  xl:columns-3 items-center justify-center'>
             {
                 popup && createPortal(
                     <Popup works={filterList()} clicked={clicked} openPopup={() => openPopup()} />, document.body

@@ -12,7 +12,7 @@ export default function FilterList({code}) {
     ]
 
   return (
-    <div className='grid grid-cols-3 gap-5 items-center md:grid-cols-2'>
+    <div className='grid sm:grid-cols-2 gap-5 items-center xl:grid-cols-3'>
         {
             (code.length > 0 ? events.filter(entry => code.includes(entry.code)) : events)
             .map((event,index) => <FilterListItem key={index} {...event}  /> )

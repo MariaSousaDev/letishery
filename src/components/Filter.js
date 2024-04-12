@@ -24,7 +24,10 @@ export default function Filter({type}) {
     
     return (
         <div>
-            <ul className='mb-10'>
+            <p className='mb-2 inline text-sunglo-500 text- relative after:content-[""] after:absolute after:w-full after:h-[3px] after:bg-sunglo-100 after:bottom-0 after:left-0'>
+                Filter by
+            </p>
+            <ul className='mb-10 mt-3'>
             {
                 type === "events" ?
                     countries.map((country) => <FilterItem key={country.code} title={country.label} onClick={() => handleChangeCountryFilter(country.code)} isActive={countryFilter.includes(country.code)}  />) :

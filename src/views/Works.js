@@ -1,11 +1,12 @@
 import React from 'react'
 import Filter from '../components/Filter'
+import Title from '../components/Title'
 
 export default function Works() {
 
   return (
-    <div className='min-h-screen flex flex-col items-center justify-center w-full pl-[22vw]'>
-      <h2>Works</h2>
+    <div className=' flex flex-col items-center justify-center w-full sm:pl-[22vw]'>
+      <Title title="Works" />
       <Filter type="works"/>
 
     </div>

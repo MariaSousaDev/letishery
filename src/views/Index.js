@@ -4,7 +4,7 @@ import BG01 from "../assets/bgs/01-01 leti dragon.png";
 
 export default function Index() {
   return (
-    <div className='relative h-screen flex flex-col items-center justify-center w-full pl-[22vw] '>
+    <div className='relative  flex flex-col items-center justify-center w-full pl-[22vw] '>
       <div className='items-center justify-center rounded-full overflow-hidden w-3/4  xl:w-[35vw] xl:h-[35vw]'>
         <img className='xl:-mt-36' src={BG01} alt="" />
       </div>

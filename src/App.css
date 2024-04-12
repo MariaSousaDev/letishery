@@ -10,11 +10,7 @@
         @apply text-2xl;
     }
 
-    h2 {
-        @apply text-3xl;
-        @apply mb-10;
-        @apply text-sunglo-400
-    }
+
     *{
         @apply text-dawn-pink-950;
         box-sizing: border-box;
