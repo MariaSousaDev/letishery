@@ -3,7 +3,7 @@ import Button from '../components/Button'
 
 export default function About() {
   return (
-    <div>
+    <div className='min-h-screen flex flex-col items-center justify-center w-full pl-[22vw]'>
       <h2>About me</h2>
       <p className='mb-10'>
         Hi, I'm Leti! I'm a self-taught freelance illustrator, merch designer, owner of Letishery, and an enjoyer of otome games based in the Netherlands.

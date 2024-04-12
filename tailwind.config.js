@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        msmadi: ["Ms Madi", "sans-serif"],
+      },
       colors: {
         'sunglo': {
           '50': '#fdf4f3',
