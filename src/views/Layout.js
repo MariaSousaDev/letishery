@@ -13,7 +13,7 @@ export default function Layout() {
         <div className='relative xl:w-[80vw] xl:self-center '>
           <img className='fixed bottom-0 right-0 -z-10 max-h-full' src={BGFlower} alt="" />
             <Menu />
-            <div className='min-h-screen flex p-8 text-center'>
+            <div className='min-h-[95vh] sm:min-h-screen flex p-8 text-center'>
                     <Outlet/>
                 </div>
             {/* <Footer /> */}

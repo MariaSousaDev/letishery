@@ -40,6 +40,7 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         slide: 'slide 1s ease-in-out alternate infinite',
+        slideFull: 'slideFull 1s ease-in-out',
       },
       keyframes: {
         wiggle: {
@@ -49,6 +50,10 @@ module.exports = {
         slide: {
           '0%': { transform: 'translateX(0px)' },
           '100%': { transform: 'translateX(5px)' },
+        },
+        slideFull: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
         },
       }
     },
