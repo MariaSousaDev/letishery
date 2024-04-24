@@ -2,43 +2,83 @@ import React from 'react'
 import Button from '../components/Button'
 import Title from '../components/Title'
 import chibiLeti from "../assets/bgs/11-05 leti.png";
+import { motion } from 'framer-motion';
+import { framerPage } from '../utils/framerData';
+import Divider from '../components/Divider';
 
 export default function About() {
   return (
-    <div className=' flex flex-col items-center justify-center w-full sm:pl-[22vw]'>
+    <motion.div 
+      className=' flex flex-col items-center justify-center w-full md:pl-[26vw] lg:pl-[22vw]'
+      {...framerPage}
+      >
       <Title title="About me"/>
-      <div className='flex sm:flex-row-reverse gap-10 mb-10 items-center flex-col'>
-        <div className='w-1/2 rounded-full'>
-        <img className='w-full ' src={chibiLeti} alt="" />
+      <div className='justify-center flex'>
+        <img className='w-auto max-h-[250px] ' src={chibiLeti} />
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 items-start justify-start flex-col mt-8'>
+        <div className='md:col-span-2 flex items-center flex-col'>
+          <h3 className='font-msmadi text-sunglo-400 text-5xl tracking-wide'>Hola!</h3>
+          <p className=' w-full md:w-3/4 p-2 text-dawn-pink-800'>
+            I'm Leti, a freelance artist from Spain based in the Netherlands. I specialize in anime illustrations and character designs. <br /><br />
+            I'm available for personal and commercial projects. Whether you're looking to add a personal touch to your project or bring your brand to life, I'm here to help. Let's collaborate and create something amazing together!
+          </p>
+          
         </div>
-        <p className=' w-full'>
-          Hi, I'm Leti! I'm a self-taught freelance illustrator, merch designer, owner of Letishery, and an enjoyer of otome games based in the Netherlands.
-          <br /><br />
-          I've loved to draw for all my life but recently working on digital illustrations since 2019. You can find my art in social media and in my own merch store.
-          <br /><br />
-          As always, I thank you for your continuous support and I'll continue to improve and try my best with every piece!
-        </p>
+        <div>
+          <h3 className='font-msmadi text-sunglo-400 text-5xl tracking-wide'>Languages</h3>
+          <p className=' w-full p-2 text-dawn-pink-800'>
+            ✽ English <br/>
+            ✽ Spanish
+          </p>
+        </div>
+        <div>
+          <h3 className='font-msmadi text-sunglo-400 text-5xl tracking-wide'>Education</h3>
+          <p className=' w-full p-2 text-dawn-pink-800'>
+            ✽ Software Engineer
+          </p>
+        </div>
+        <div>
+          <h3 className='font-msmadi text-sunglo-400 text-5xl tracking-wide'>Skills</h3>
+          <p className=' w-full p-2 text-dawn-pink-800'>
+            ✽ Illustration<br/>
+            ✽ Character design<br/>
+            ✽ Merch Design<br/>
+            ✽ Web Development<br/>
+          </p>
+        </div>
+        <div>
+          <h3 className='font-msmadi text-sunglo-400 text-5xl tracking-wide'>Art tools</h3>
+          <p className=' w-full p-2 text-dawn-pink-800'>
+            ✽ Wacom Intuos Pro L<br/>
+            ✽ Clip Studio Paint<br />
+            ✽ Adobe Photoshop
+          </p>
+        </div>
 
       </div>
-      <div className='grid gap-6 sm:grid-cols-3'>
+
+    <Divider/>
+
+      <div className='grid gap-6 md:grid-cols-3'>
         <div className=''>
-            <span>Art</span>
+            <h5>Art</h5>
             <Button link="https://twitter.com/Letishery" label="Twitter"/>
             <Button link="https://www.instagram.com/letishery" label="Instagram"/>
             <Button link="https://www.pixiv.net/en/users/73379328" label="Pixiv"/>
         </div>
         <div>
-            <span>Merch</span>
+            <h5>Merch</h5>
             <Button link="https://letishery.etsy.com" label="Etsy (physical)"/>
             <Button link="https://ko-fi.com/letishery" label="Ko-Fi (digital)"/>
         </div>
         <div>
-            <span>Commissions</span>
+            <h5>Commissions</h5>
             <Button link="https://vgen.co/letishery" label="VGen"/>
-            <span>Vtuber</span>
+            <h5 className='mt-8'>Vtuber</h5>
             <Button link="https://www.twitch.tv/letishiaweiss" label="Twitch (Streams)"/>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

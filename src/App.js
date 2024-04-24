@@ -1,13 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import About from "./views/About";
 import Works from "./views/Works";
 import Contact from "./views/Contact";
-import Conventions from "./views/Conventions";
+import Events from "./views/Events";
 import Layout from "./views/Layout";
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Index from './views/Index';
+import Goods from './views/Goods';
 
 
 function App() {
@@ -19,7 +19,8 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Works" element={<Works />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Conventions" element={<Conventions />} />
+          <Route path="/Events" element={<Events />} />
+          <Route path="/Goods" element={<Goods />} />
         </Route>
       </Routes>
       
