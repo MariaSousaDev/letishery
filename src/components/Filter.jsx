@@ -41,7 +41,7 @@ export default function Filter({type}) {
             }
             </ul>
             {
-                type === "events" ? <FilterEvent code={countryFilter} /> : <FilterGallery code={countryFilter} data={type === "works" ? dataWork : dataGood} /> 
+                type === "events" ? <FilterEvent code={countryFilter} /> : <FilterGallery code={countryFilter} data={type === "works" ? dataWork : dataGood} type={type === "works" ? 'works' : 'goods'} /> 
             }
             
         </div>

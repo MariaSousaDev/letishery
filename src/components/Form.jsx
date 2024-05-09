@@ -16,7 +16,7 @@ export default function Form() {
       const credentials = Realm.Credentials.emailPassword(import.meta.env.VITE_EMAIL_SECRET, import.meta.env.VITE_EMAIL_KEY);
       app.logIn(credentials).then(response => {
         const mongodb = response.mongoClient("mongodb-atlas");
-        const database = mongodb.db("letishery");
+        const database = mongodb.db("letisheryDB");
         const collection = database.collection("contacts");
         collection.insertOne(data)
       }).catch(

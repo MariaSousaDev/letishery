@@ -28,7 +28,7 @@ export default function Index() {
             <h1 className='text-sunglo-400 font-msmadi text-8xl md:text-9xl cs-border'>Letishery</h1>
           </div>
           <div className='md:py-1 md:px-6 bg-white inline-block rounded-full relative -top-6 '>
-            <h4 className='text-sunglo-400 text-[0.6rem] md:text-xs uppercase tracking-widest '>Freelance Illustrator <span className='text-dawn-pink-400'>✽</span> Character Design </h4>
+            <h4 className='text-sunglo-400 text-[0.6rem] md:text-xs uppercase tracking-widest '>Illustrator <span className='text-dawn-pink-400'>✽</span> Character Design </h4>
           </div>
         </div>
       </motion.div>

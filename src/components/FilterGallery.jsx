@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import FilterGalleryItem from './FilterGalleryItem'
 import Popup from './Popup'
 import { createPortal } from 'react-dom'
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
-export default function FilterGallery({code, data}) {
+export default function FilterGallery({code, data, type}) {
     const [popup, setPopup] = useState(false)
     const [clicked, setClicked] = useState(0)
 
@@ -17,6 +18,8 @@ export default function FilterGallery({code, data}) {
         setPopup(!popup)
         setClicked(index)
     }
+
+   
     
     useEffect(() => {
         popup ? document.body.classList.add('overflow-y-hidden') : document.body.classList.remove('overflow-y-hidden')
@@ -26,19 +29,25 @@ export default function FilterGallery({code, data}) {
     }
     }, [popup])
  
-
     return (
-         <div className='columns-1 md:columns-2 gap-6 xl:columns-3 items-center justify-center'>
+        <div className='w-full xl:w-[55vw]'>
             {
                 popup && createPortal(
                     <Popup works={FilterEvent()} clicked={clicked} openPopup={() => openPopup()} />, document.body
                 )
             }
-            {
-                FilterEvent().map((work, index) => <FilterGalleryItem key={index} {...work} onClick={() => openPopup(index)} />)
+
+            <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 1400: 3, 2300: 3 }}>
+                <Masonry gutter="1.5rem">
+                {
+                    
+                    FilterEvent().map((work, index) => <FilterGalleryItem key={index} {...work} onClick={() => openPopup(index)} />)
 
 
-            }
+                }
+                
+                </Masonry>
+            </ResponsiveMasonry>
         </div>
     )
 }

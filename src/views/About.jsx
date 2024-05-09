@@ -1,26 +1,47 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from '../components/Button'
 import Title from '../components/Title'
 import { motion } from 'framer-motion';
 import { framerPage } from '../utils/framerData';
 import Divider from '../components/Divider';
+import Parallax from 'parallax-js' 
+import { HiChatBubbleOvalLeft } from "react-icons/hi2";
+
 
 export default function About() {
+
+  useEffect(() => {
+    const scene = document.getElementById('scene2');
+    const parallaxInstance = new Parallax(scene);
+
+    return () => {
+    }
+  },)
+
+  
   return (
     <motion.div 
       className=' flex flex-col items-center justify-center w-full md:pl-[26vw] lg:pl-[22vw]'
       {...framerPage}
       >
       <Title title="About me"/>
-      <div className='justify-center flex'>
-        <img className='w-auto max-h-[250px] ' src="https://letishery.art/images/letiAbout.png" />
+
+      <div id="scene2"  className='relative justify-center flex'>
+        <img data-depth="0.2" className='absolute' src="https://letishery.art/images/05-03 leti portrait casual bg1.png" alt="" />
+        <img data-depth="0.5" className='absolute' src="https://letishery.art/images/05-03 leti portrait casual bg2.png" alt="" />
+        <img data-depth="0.25" className='absolute' src="https://letishery.art/images/05-03 leti portrait casual bg3.png" alt="" />
+        <div data-depth="0.25" className='absolute w-full h-1/2 '>
+          <div className='relative animate-wiggle md:hover:animate-slide duration-300 top-20  left-3/4 transform -translate-y-3/4 '>
+            <HiChatBubbleOvalLeft className='fill-sunglo-100 w-40 h-40' />
+            <h3 className='font-msmadi text-sunglo-400 text-5xl tracking-wide absolute top-14 left-7'>Hola!</h3>
+          </div>
+        </div>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 items-start justify-start flex-col mt-8'>
         <div className='md:col-span-2 flex items-center flex-col'>
-          <h3 className='font-msmadi text-sunglo-400 text-5xl tracking-wide'>Hola!</h3>
           <p className=' w-full md:w-3/4 p-2 text-dawn-pink-800'>
             I'm Leti, a freelance artist from Spain based in the Netherlands. I specialize in anime illustrations and character designs. <br /><br />
-            I'm available for personal and commercial projects. Whether you're looking to add a personal touch to your project or bring your brand to life, I'm here to help. Let's collaborate and create something amazing together!
+            I'm available for personal and commercial projects. Whether you're looking to add a personal touch to your project or bring your brand to life, I'm here to help. Let's collaborate and create something amazing together! <br /><br />
           </p>
           
         </div>
@@ -58,8 +79,9 @@ export default function About() {
       </div>
 
     <Divider/>
+      <h3 className='font-msmadi text-sunglo-400 text-5xl tracking-wide mb-8'>Social Media & Links</h3>
 
-      <div className='grid gap-6 md:grid-cols-3'>
+      <div className='grid gap-6 md:grid-cols-3 mb-10'>
         <div className=''>
             <h5>Art</h5>
             <Button link="https://twitter.com/Letishery" label="Twitter"/>
@@ -78,6 +100,10 @@ export default function About() {
             <Button link="https://www.twitch.tv/letishiaweiss" label="Twitch (Streams)"/>
         </div>
       </div>
+
+      <Divider />
+
+      <img src="https://letishery.art/images/about-2.png" alt="" />
     </motion.div>
   )
 }

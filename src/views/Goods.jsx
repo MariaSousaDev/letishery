@@ -4,6 +4,7 @@ import Title from '../components/Title';
 import { motion } from 'framer-motion';
 import { framerPage } from '../utils/framerData';
 import Divider from '../components/Divider';
+import CTA from '../components/CTA';
 
 export default function Goods() {
   return (
@@ -17,6 +18,8 @@ export default function Goods() {
       </p>
       <Divider/>
       <Filter type="goods"/>
+      <CTA title="Do you like my merch?" paragraph="I can make customized merch for you! <br/>Send your request and let's make great merch together!." label="Contact me" link="contact" />
+
     </motion.div>
   )
 }
